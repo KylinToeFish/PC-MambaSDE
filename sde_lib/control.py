@@ -29,7 +29,7 @@ def forward_fill_3d(t: torch.Tensor) -> torch.Tensor:
     return filled_t
 
 
-class Transformer_Encoder(nn.Module):
+class Encoder(nn.Module):
     def __init__(self, args):
         super().__init__()
         self.args = args
