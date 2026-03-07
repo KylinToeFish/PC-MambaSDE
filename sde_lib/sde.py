@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import geotorch
 from typing import Tuple
-from .control import Transformer_Encoder, Decoder
+from .control import Encoder, Decoder
 from .jax_compat import associative_scan
 from .losses import GNLL_
 
@@ -37,7 +37,7 @@ class LinearSDE(torch.nn.Module):
 
         self.coeff_net = nn.Sequential(nn.Linear(self.ld, self.nb), nn.Softmax(dim=-1))
         
-        self.encoder = Transformer_Encoder(args)
+        self.encoder = Encoder(args)
         
         self.decoder = Decoder(args) 
 
