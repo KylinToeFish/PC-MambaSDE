@@ -1,6 +1,6 @@
 import torch
 torch.manual_seed(1)
-from data_process.data_processing2 import data_processing as data_processing2
+from data_process.data_processing import data_processing as data_processing2
 from visualize import *
 from data_process.loader import *
 from torch.utils.data import DataLoader
