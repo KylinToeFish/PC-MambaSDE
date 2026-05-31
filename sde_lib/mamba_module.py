@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from einops import rearrange
 import math
-from .jax_compat import associative_scan 
+from .sde_utils import associative_scan 
 
 class MambaBlock(nn.Module):
     def __init__(self, d_model, d_state=16, d_conv=4, expand=2):
