@@ -3,7 +3,7 @@ import torch.nn as nn
 import geotorch
 from typing import Tuple
 from .control import Encoder, Decoder
-from .jax_compat import associative_scan
+from .sde_utils import associative_scan
 from .losses import GNLL_
 
 def elup(x: torch.Tensor) -> torch.Tensor:
